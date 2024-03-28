@@ -7,32 +7,34 @@ import com.zarinraim.accounting.model.SyntheticAccount
 
 object ChartAccountFormat {
 
-    fun format(classAccounts: List<ClassAccount>): List<ClassItemState> {
-        return classAccounts.map { it.format() }
+    fun format(classAccounts: List<ClassAccount>, expandDefault: Boolean): List<ClassItemState> {
+        return classAccounts.map { it.format(expandDefault) }
     }
 
-    private fun ClassAccount.format() = ClassItemState(
+    fun format(syntheticAccount: SyntheticAccount): SyntheticItemState = SyntheticItemState(
+        code = syntheticAccount.id,
+        number = syntheticAccount.id.code,
+        title = syntheticAccount.id.title,
+        features = syntheticAccount.features.format()
+    )
+
+    private fun ClassAccount.format(expandDefault: Boolean): ClassItemState = ClassItemState(
         code = id,
         number = id.code,
         title = id.title,
-        expanded = false,
+        expanded = expandDefault,
+        expandVisible = !expandDefault,
         background = id.toColor(),
-        groupAccounts = groupAccounts.map { it.format() }
+        groupAccounts = groupAccounts.map { it.format(expandDefault) }
     )
 
-    private fun GroupAccount.format() = GroupItemState(
+    private fun GroupAccount.format(expandDefault: Boolean): GroupItemState = GroupItemState(
         code = id,
         number = id.code,
         title = id.title,
-        expanded = false,
-        syntheticAccounts = syntheticAccounts.map { it.format() }
-    )
-
-    private fun SyntheticAccount.format() = SyntheticItemState(
-        code = id,
-        number = id.code,
-        title = id.title,
-        features = features.format()
+        expanded = expandDefault,
+        expandVisible = !expandDefault,
+        syntheticAccounts = syntheticAccounts.map(::format)
     )
 
     private fun List<SyntheticAccount.Feature>.format(): String {

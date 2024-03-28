@@ -6,6 +6,7 @@ data class ClassItemState(
     val code: AccountId,
     val number: String,
     val title: String,
+    val expandVisible: Boolean,
     val expanded: Boolean,
     val background: ClassColor,
     val groupAccounts: List<GroupItemState>
@@ -15,6 +16,7 @@ data class GroupItemState(
     val code: AccountId,
     val number: String,
     val title: String,
+    val expandVisible: Boolean,
     val expanded: Boolean,
     val syntheticAccounts: List<SyntheticItemState>
 )
