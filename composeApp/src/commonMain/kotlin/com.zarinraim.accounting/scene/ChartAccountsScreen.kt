@@ -2,6 +2,7 @@ package com.zarinraim.accounting.scene
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -13,6 +14,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
@@ -39,14 +42,43 @@ import com.zarinraim.accounting.utils.getViewModel
 
 @Composable
 fun ChartAccountsScreen(viewModel: ChartAccountsViewModel = getViewModel()) {
-    val state = viewModel.states.collectAsState().value
+    Screen(
+        state = viewModel.states.collectAsState().value,
+        onAccount = viewModel::onAccount,
+        onQueryChange = viewModel::onQueryChange,
+        onQueryClear = viewModel::onQueryClear,
+    )
+}
 
-    LazyColumn(modifier = Modifier.fillMaxHeight()) {
-        item { SearchBar(state = state, onChange = viewModel::onQueryChange, onClear = viewModel::onQueryClear) }
+@Composable
+private fun Screen(
+    state: State,
+    onAccount: (AccountId) -> Unit,
+    onQueryChange: (String) -> Unit,
+    onQueryClear: () -> Unit,
+) {
+    Scaffold(
+        topBar = { SearchBar(state = state, onChange = onQueryChange, onClear = onQueryClear) },
+        content = { innerPadding ->
+            Content(
+                state = state,
+                innerPadding = innerPadding,
+                onAccount = onAccount
+            )
+        }
+    )
+}
 
+@Composable
+private fun Content(
+    state: State,
+    innerPadding: PaddingValues,
+    onAccount: (AccountId) -> Unit,
+) {
+    LazyColumn(modifier = Modifier.padding(innerPadding).fillMaxHeight()) {
         when {
             state.searchQuery.isNotEmpty() -> searchResults(state)
-            else -> accounts(state = state, onAccount = viewModel::onAccount)
+            else -> accounts(state = state, onAccount = onAccount)
         }
 
         item { VerticalSpacer(16.dp) }
@@ -113,13 +145,12 @@ private fun LazyListScope.classItem(
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 private fun LazyListScope.groupItem(
     state: GroupItemState,
     backgroundColor: Color,
     onItem: (AccountId) -> Unit,
 ) {
-    stickyHeader {
+    item {
         ItemDropDownSecondary(
             number = state.number,
             title = state.title,
@@ -146,31 +177,33 @@ private fun LazyListScope.syntheticAccounts(state: List<SyntheticItemState>) {
 @Composable
 private fun SearchBar(state: State, onChange: (String) -> Unit, onClear: () -> Unit) {
     val focusManager = LocalFocusManager.current
-    Box(
-        contentAlignment = Alignment.Center,
-        modifier = Modifier.padding(all = 16.dp)
-    ) {
-        OutlinedTextField(
-            value = state.searchQuery,
-            modifier = Modifier.fillMaxWidth(),
-            placeholder = { Text("Vyhledat") },
-            singleLine = true,
-            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-            keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() }),
-            colors = TextFieldDefaults.outlinedTextFieldColors(
-                focusedBorderColor = Color(color = 0xffe79a3d),
-                cursorColor = Color(color = 0xffe79a3d)
-            ),
-            trailingIcon = if (state.searchQuery.isNotEmpty()) @Composable {
-                {
-                    IconButton(onClick = { onClear() }) {
-                        Icon(Icons.Default.Clear, "")
+    Surface(elevation = 8.dp) {
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier.padding(all = 8.dp)
+        ) {
+            OutlinedTextField(
+                value = state.searchQuery,
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text("Vyhledat") },
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() }),
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    focusedBorderColor = Color(color = 0xffe79a3d),
+                    cursorColor = Color(color = 0xffe79a3d)
+                ),
+                trailingIcon = if (state.searchQuery.isNotEmpty()) @Composable {
+                    {
+                        IconButton(onClick = { onClear() }) {
+                            Icon(Icons.Default.Clear, "")
+                        }
                     }
-                }
-            } else {
-                null
-            },
-            onValueChange = onChange,
-        )
+                } else {
+                    null
+                },
+                onValueChange = onChange,
+            )
+        }
     }
 }
