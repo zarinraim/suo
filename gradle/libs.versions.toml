@@ -8,11 +8,12 @@ compose = "1.6.4"
 compose-plugin = "1.6.0"
 koin = "3.6.0-alpha1"
 kotlin = "1.9.22"
-lifecycle-version = "2.7.0"
+lifecycle-version = "2.8.0-alpha04"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycle-version" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle-version" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
