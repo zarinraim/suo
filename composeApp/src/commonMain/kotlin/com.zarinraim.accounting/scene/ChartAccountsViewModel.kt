@@ -1,6 +1,6 @@
 package com.zarinraim.accounting.scene
 
-import com.zarinraim.accounting.domain.ChartAccountRepository
+import com.zarinraim.accounting.domain.ChartAccountUseCase
 import com.zarinraim.accounting.model.AccountId
 import com.zarinraim.accounting.model.ChartAccount
 import com.zarinraim.accounting.model.ClassAccount
@@ -14,11 +14,11 @@ import com.zarinraim.accounting.utils.ViewModelState
 import com.zarinraim.accounting.utils.normalize
 
 class ChartAccountsViewModel(
-    chartAccountRepository: ChartAccountRepository,
+    private val fetchAccounts: ChartAccountUseCase.Fetch,
 ) : StatefulViewModel<State>(State()) {
 
     init {
-        state = chartAccountRepository.fetch().toState()
+        fetch()
     }
 
     fun onAccount(code: AccountId) {
@@ -38,6 +38,10 @@ class ChartAccountsViewModel(
             searchQuery = "",
             filteredAccounts = emptyList(),
         )
+    }
+
+    private fun fetch() {
+        state = fetchAccounts().toState()
     }
 
     private fun filter(query: String): List<SyntheticAccount> {
