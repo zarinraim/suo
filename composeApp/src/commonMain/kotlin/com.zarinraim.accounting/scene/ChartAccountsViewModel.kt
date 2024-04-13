@@ -28,7 +28,7 @@ class ChartAccountsViewModel(
     fun onQueryChange(query: String) {
         state = state.copy(
             searchQuery = query.trimStart(),
-            filteredAccounts = filter(query).map(ChartAccountFormat::format),
+            filteredAccounts = filter(query).map { ChartAccountFormat.format(it, true) },
         )
     }
 

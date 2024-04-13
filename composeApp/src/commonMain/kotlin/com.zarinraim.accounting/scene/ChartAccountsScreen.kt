@@ -177,6 +177,7 @@ private fun LazyListScope.syntheticAccounts(state: List<SyntheticItemState>) {
             leadingText = accountItem.number,
             mainText = accountItem.title,
             featureText = accountItem.features,
+            backgroundColor = accountItem.backroundColor
         )
     }
 }

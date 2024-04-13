@@ -1,9 +1,10 @@
 package com.zarinraim.accounting.presentation
 
+import androidx.compose.ui.graphics.Color
 import com.zarinraim.accounting.model.AccountId
 
 data class AccountsState(
-    val items: List<ClassItemState>
+    val items: List<ClassItemState>,
 ) {
 
     fun collapseAll(): AccountsState {
@@ -42,7 +43,7 @@ data class ClassItemState(
     val expandVisible: Boolean,
     val expanded: Boolean,
     val background: ClassColor,
-    val groupAccounts: List<GroupItemState>
+    val groupAccounts: List<GroupItemState>,
 )
 
 data class GroupItemState(
@@ -51,12 +52,13 @@ data class GroupItemState(
     val title: String,
     val expandVisible: Boolean,
     val expanded: Boolean,
-    val syntheticAccounts: List<SyntheticItemState>
+    val syntheticAccounts: List<SyntheticItemState>,
 )
 
 data class SyntheticItemState(
     val code: AccountId,
     val number: String,
     val title: String,
-    val features: String
+    val features: String,
+    val backroundColor: Color,
 )

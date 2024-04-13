@@ -1,5 +1,6 @@
 package com.zarinraim.accounting.presentation
 
+import androidx.compose.ui.graphics.Color
 import com.zarinraim.accounting.model.AccountId
 import com.zarinraim.accounting.model.ClassAccount
 import com.zarinraim.accounting.model.GroupAccount
@@ -13,11 +14,12 @@ object ChartAccountFormat {
         )
     }
 
-    fun format(syntheticAccount: SyntheticAccount): SyntheticItemState = SyntheticItemState(
+    fun format(syntheticAccount: SyntheticAccount, useColorBackground: Boolean = false): SyntheticItemState = SyntheticItemState(
         code = syntheticAccount.id,
         number = syntheticAccount.id.code,
         title = syntheticAccount.id.title,
-        features = syntheticAccount.features.format()
+        features = syntheticAccount.features.format(),
+        backroundColor = if (useColorBackground) syntheticAccount.id.toColor().secondaryColor else Color.Transparent
     )
 
     private fun ClassAccount.format(expandDefault: Boolean): ClassItemState = ClassItemState(
