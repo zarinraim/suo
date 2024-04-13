@@ -6,6 +6,15 @@ data class AccountsState(
     val items: List<ClassItemState>
 ) {
 
+    fun collapseAll(): AccountsState {
+        return copy(items = items.map { classItem ->
+            classItem.copy(
+                expanded = false,
+                groupAccounts = classItem.groupAccounts.map { groupItem -> groupItem.copy(expanded = false) }
+            )
+        })
+    }
+
     fun toggle(code: AccountId): AccountsState {
         return copy(items = items.map { classItemState -> updateClassExpanded(code, classItemState) })
     }

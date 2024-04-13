@@ -32,8 +32,9 @@ class ChartAccountsViewModel(
         )
     }
 
-    fun onQueryClear() {
+    fun onRefresh() {
         state = state.copy(
+            accounts = state.accounts.collapseAll(),
             searchQuery = "",
             filteredAccounts = emptyList(),
         )
@@ -60,6 +61,6 @@ class ChartAccountsViewModel(
         val searchQuery: String = "",
         val filteredAccounts: List<SyntheticItemState> = emptyList(),
         val accounts: AccountsState = AccountsState(emptyList()),
-        internal val data: List<ClassAccount> = emptyList()
+        internal val data: List<ClassAccount> = emptyList(),
     ) : ViewModelState
 }

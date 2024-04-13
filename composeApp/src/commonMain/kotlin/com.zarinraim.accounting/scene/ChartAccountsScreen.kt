@@ -6,29 +6,32 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusManager
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.zarinraim.accounting.model.AccountId
+import com.zarinraim.accounting.presentation.ClassColor
 import com.zarinraim.accounting.presentation.ClassItemState
 import com.zarinraim.accounting.presentation.GroupItemState
 import com.zarinraim.accounting.presentation.SyntheticItemState
@@ -46,7 +49,7 @@ fun ChartAccountsScreen(viewModel: ChartAccountsViewModel = getViewModel()) {
         state = viewModel.states.collectAsState().value,
         onAccount = viewModel::onAccount,
         onQueryChange = viewModel::onQueryChange,
-        onQueryClear = viewModel::onQueryClear,
+        onRefresh = viewModel::onRefresh
     )
 }
 
@@ -55,17 +58,20 @@ private fun Screen(
     state: State,
     onAccount: (AccountId) -> Unit,
     onQueryChange: (String) -> Unit,
-    onQueryClear: () -> Unit,
+    onRefresh: () -> Unit,
 ) {
+    val focusManager = LocalFocusManager.current
+
     Scaffold(
-        topBar = { SearchBar(state = state, onChange = onQueryChange, onClear = onQueryClear) },
+        topBar = { SearchBar(state = state, focusManager = focusManager, onChange = onQueryChange) },
         content = { innerPadding ->
             Content(
                 state = state,
                 innerPadding = innerPadding,
-                onAccount = onAccount
+                onAccount = onAccount,
             )
-        }
+        },
+        floatingActionButton = { FloatingButton(focusManager = focusManager, onRefresh = onRefresh) }
     )
 }
 
@@ -176,8 +182,7 @@ private fun LazyListScope.syntheticAccounts(state: List<SyntheticItemState>) {
 }
 
 @Composable
-private fun SearchBar(state: State, onChange: (String) -> Unit, onClear: () -> Unit) {
-    val focusManager = LocalFocusManager.current
+private fun SearchBar(state: State, focusManager: FocusManager, onChange: (String) -> Unit) {
     Surface(elevation = 8.dp) {
         Box(
             contentAlignment = Alignment.Center,
@@ -194,17 +199,22 @@ private fun SearchBar(state: State, onChange: (String) -> Unit, onClear: () -> U
                     focusedBorderColor = Color(color = 0xffe79a3d),
                     cursorColor = Color(color = 0xffe79a3d)
                 ),
-                trailingIcon = if (state.searchQuery.isNotEmpty()) @Composable {
-                    {
-                        IconButton(onClick = { onClear() }) {
-                            Icon(Icons.Default.Clear, "")
-                        }
-                    }
-                } else {
-                    null
-                },
                 onValueChange = onChange,
             )
         }
+    }
+}
+
+@Composable
+private fun FloatingButton(focusManager: FocusManager, onRefresh: () -> Unit) {
+    FloatingActionButton(
+        onClick = {
+            focusManager.clearFocus()
+            onRefresh()
+        },
+        modifier = Modifier.size(64.dp),
+        backgroundColor = ClassColor.Class0.secondaryColor
+    ) {
+        Icon(imageVector = Icons.Default.Refresh, contentDescription = "")
     }
 }
