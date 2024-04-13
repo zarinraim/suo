@@ -2,6 +2,30 @@ package com.zarinraim.accounting.presentation
 
 import com.zarinraim.accounting.model.AccountId
 
+data class AccountsState(
+    val items: List<ClassItemState>
+) {
+
+    fun toggle(code: AccountId): AccountsState {
+        return copy(items = items.map { classItemState -> updateClassExpanded(code, classItemState) })
+    }
+
+    private fun updateClassExpanded(code: AccountId, classAccount: ClassItemState) = when {
+        classAccount.code.classNumber == code.classNumber -> classAccount.copy(
+            expanded = if (code.groupNumber != null) classAccount.expanded else !classAccount.expanded,
+            groupAccounts = classAccount.groupAccounts.map { groupAccount -> updateGroupExpanded(code, groupAccount) }
+        )
+        classAccount.expanded -> classAccount.copy(expanded = false)
+        else -> classAccount
+    }
+
+    private fun updateGroupExpanded(code: AccountId, groupAccount: GroupItemState) = when {
+        groupAccount.code.groupNumber == code.groupNumber -> groupAccount.copy(expanded = !groupAccount.expanded)
+        groupAccount.expanded -> groupAccount.copy(expanded = false)
+        else -> groupAccount
+    }
+}
+
 data class ClassItemState(
     val code: AccountId,
     val number: String,

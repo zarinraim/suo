@@ -76,6 +76,7 @@ private fun Content(
     onAccount: (AccountId) -> Unit,
 ) {
     LazyColumn(modifier = Modifier.padding(innerPadding).fillMaxHeight()) {
+        item { VerticalSpacer() }
         when {
             state.searchQuery.isNotEmpty() -> searchResults(state)
             else -> accounts(state = state, onAccount = onAccount)
@@ -89,7 +90,7 @@ private fun LazyListScope.accounts(
     state: State,
     onAccount: (AccountId) -> Unit,
 ) {
-    state.accounts.forEachIndexed { index, classItem ->
+    state.accounts.items.forEachIndexed { index, classItem ->
         if (index != 0) item { VerticalSpacer(8.dp) }
         classItem(
             state = classItem,

@@ -7,8 +7,10 @@ import com.zarinraim.accounting.model.SyntheticAccount
 
 object ChartAccountFormat {
 
-    fun format(classAccounts: List<ClassAccount>, expandDefault: Boolean): List<ClassItemState> {
-        return classAccounts.map { it.format(expandDefault) }
+    fun format(classAccounts: List<ClassAccount>, expandDefault: Boolean): AccountsState {
+        return AccountsState(
+            items = classAccounts.map { it.format(expandDefault) }
+        )
     }
 
     fun format(syntheticAccount: SyntheticAccount): SyntheticItemState = SyntheticItemState(
