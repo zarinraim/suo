@@ -3,6 +3,7 @@ package com.zarinraim.accounting.presentation
 import androidx.compose.ui.graphics.Color
 import com.zarinraim.accounting.model.AccountId
 import com.zarinraim.accounting.model.ClassAccount
+import com.zarinraim.accounting.model.Feature
 import com.zarinraim.accounting.model.GroupAccount
 import com.zarinraim.accounting.model.SyntheticAccount
 
@@ -41,20 +42,20 @@ object ChartAccountFormat {
         syntheticAccounts = syntheticAccounts.map(::format)
     )
 
-    private fun List<SyntheticAccount.Feature>.format(): String {
+    private fun List<Feature>.format(): String {
         val features = map { it.toText() }
         return features.joinToString("\t\t\t")
     }
 
-    private fun SyntheticAccount.Feature.toText(): String = when (this) {
-        SyntheticAccount.Feature.Balance -> "R"
-        SyntheticAccount.Feature.OffBalance -> "P*"
-        SyntheticAccount.Feature.Income -> "V"
-        SyntheticAccount.Feature.Financial -> "Z"
-        SyntheticAccount.Feature.Asset -> "A"
-        SyntheticAccount.Feature.Liability -> "P"
-        SyntheticAccount.Feature.TaxExpense -> "D"
-        SyntheticAccount.Feature.NonTaxExpense -> "N"
+    private fun Feature.toText(): String = when (this) {
+        Feature.Balance -> "R"
+        Feature.OffBalance -> "P*"
+        Feature.Income -> "V"
+        Feature.Financial -> "Z"
+        Feature.Asset -> "A"
+        Feature.Liability -> "P"
+        Feature.TaxExpense -> "D"
+        Feature.NonTaxExpense -> "N"
     }
 
     private fun AccountId.toColor(): ClassColor {

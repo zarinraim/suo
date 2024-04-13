@@ -1,9 +1,9 @@
 package com.zarinraim.accounting.data
 
 import com.zarinraim.accounting.model.AccountId
+import com.zarinraim.accounting.model.Feature
 import com.zarinraim.accounting.model.GroupAccount
 import com.zarinraim.accounting.model.SyntheticAccount
-import com.zarinraim.accounting.model.SyntheticAccount.Feature
 
 object ClassAccount0 {
 
