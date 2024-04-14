@@ -11,13 +11,13 @@ object FeatureFormat {
     )
 
     private fun Feature.toLabel() = when (this) {
-        Feature.Balance -> "rozvahový"
-        Feature.OffBalance -> "podrozvahový"
-        Feature.Income -> "výsledkový"
-        Feature.Financial -> "závěrkový"
-        Feature.Asset -> "aktivní"
-        Feature.Liability -> "pasivní"
-        Feature.TaxExpense -> "daňový"
-        Feature.NonTaxExpense -> "nedaňový"
+        Feature.Balance -> StringRef.ChartAccount.FeatureBalanceLong
+        Feature.OffBalance -> StringRef.ChartAccount.FeatureOffBalanceLong
+        Feature.Income -> StringRef.ChartAccount.FeatureIncomeLong
+        Feature.Financial -> StringRef.ChartAccount.FeatureFinancialLong
+        Feature.Asset -> StringRef.ChartAccount.FeatureAssetLong
+        Feature.Liability -> StringRef.ChartAccount.FeatureLiabilityLong
+        Feature.TaxExpense -> StringRef.ChartAccount.FeatureTaxExpenseLong
+        Feature.NonTaxExpense -> StringRef.ChartAccount.FeatureNonTaxExpenseLong
     }
 }

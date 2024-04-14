@@ -48,14 +48,14 @@ object ChartAccountFormat {
     }
 
     private fun Feature.toText(): String = when (this) {
-        Feature.Balance -> "R"
-        Feature.OffBalance -> "P*"
-        Feature.Income -> "V"
-        Feature.Financial -> "Z"
-        Feature.Asset -> "A"
-        Feature.Liability -> "P"
-        Feature.TaxExpense -> "D"
-        Feature.NonTaxExpense -> "N"
+        Feature.Balance -> StringRef.ChartAccount.FeatureBalanceShort
+        Feature.OffBalance -> StringRef.ChartAccount.FeatureOffBalanceShort
+        Feature.Income -> StringRef.ChartAccount.FeatureIncomeShort
+        Feature.Financial -> StringRef.ChartAccount.FeatureFinancialShort
+        Feature.Asset -> StringRef.ChartAccount.FeatureAssetShort
+        Feature.Liability -> StringRef.ChartAccount.FeatureLiabilityShort
+        Feature.TaxExpense -> StringRef.ChartAccount.FeatureTaxExpenseShort
+        Feature.NonTaxExpense -> StringRef.ChartAccount.FeatureNonTaxExpenseShort
     }
 
     private fun AccountId.toColor(): ClassColor {

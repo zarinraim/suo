@@ -52,6 +52,7 @@ import com.zarinraim.accounting.presentation.ClassColor
 import com.zarinraim.accounting.presentation.ClassItemState
 import com.zarinraim.accounting.presentation.FeatureState
 import com.zarinraim.accounting.presentation.GroupItemState
+import com.zarinraim.accounting.presentation.StringRef
 import com.zarinraim.accounting.presentation.SyntheticItemState
 import com.zarinraim.accounting.scene.ChartAccountsViewModel.State
 import com.zarinraim.accounting.scene.component.Divider
@@ -141,7 +142,7 @@ private fun FilterBottomSheet(
     Box(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
     ) {
-        Text(text = "Účet", style = MaterialTheme.typography.h6)
+        Text(text = StringRef.ChartAccount.FilterAccountsTitle, style = MaterialTheme.typography.h6)
     }
     FlowRow(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
@@ -203,7 +204,7 @@ private fun LazyListScope.emptyState() {
             contentAlignment = Alignment.Center,
             modifier = Modifier.fillMaxWidth().padding(16.dp)
         ) {
-            Text("Žádné výsledky")
+            Text(StringRef.ChartAccount.SearchNoResultsText)
         }
     }
 }
@@ -279,7 +280,7 @@ private fun SearchBar(state: State, focusManager: FocusManager, onChange: (Strin
                 OutlinedTextField(
                     value = state.searchQuery,
                     modifier = Modifier.fillMaxWidth(),
-                    placeholder = { Text("Vyhledat") },
+                    placeholder = { Text(StringRef.ChartAccount.SearchBarPlaceholderText) },
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                     keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() }),
