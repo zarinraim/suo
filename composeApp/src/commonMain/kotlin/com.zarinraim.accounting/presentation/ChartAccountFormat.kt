@@ -15,7 +15,7 @@ object ChartAccountFormat {
         )
     }
 
-    fun format(syntheticAccount: SyntheticAccount, useColorBackground: Boolean = false): SyntheticItemState = SyntheticItemState(
+    private fun format(syntheticAccount: SyntheticAccount, useColorBackground: Boolean = false): SyntheticItemState = SyntheticItemState(
         code = syntheticAccount.id,
         number = syntheticAccount.id.code,
         title = syntheticAccount.id.title,

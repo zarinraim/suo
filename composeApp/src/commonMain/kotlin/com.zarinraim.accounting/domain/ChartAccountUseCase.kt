@@ -1,46 +1,48 @@
 package com.zarinraim.accounting.domain
 
 import com.zarinraim.accounting.model.ChartAccount
-import com.zarinraim.accounting.model.ClassAccount
-import com.zarinraim.accounting.model.Feature
-import com.zarinraim.accounting.model.GroupAccount
+import com.zarinraim.accounting.model.ChartFilter
 import com.zarinraim.accounting.utils.SuspendUnitUseCase
-import com.zarinraim.accounting.utils.SuspendUseCase
+import com.zarinraim.accounting.utils.UnitUseCase
+import com.zarinraim.accounting.utils.UseCase
+import kotlinx.coroutines.flow.Flow
 
 interface ChartAccountUseCase {
 
     class Fetch(
         private val repository: ChartAccountRepository,
-    ) : SuspendUnitUseCase<ChartAccount> {
+        private val chartRepository: ChartRepository,
+    ) : SuspendUnitUseCase<Unit> {
 
-        override suspend fun invoke(): ChartAccount {
-            return repository.fetch().fold(
-                onSuccess = { it },
-                onFailure = { ChartAccount(classAccounts = emptyList()) }
-            )
+        override suspend fun invoke() {
+            repository.fetch().onSuccess { chartRepository.store(it) }
         }
     }
 
-    class Filter(
-        private val repository: ChartAccountRepository,
-    ) : SuspendUseCase<Set<Feature>, ChartAccount> {
+    class Observe(
+        private val chartRepository: ChartRepository,
+    ) : UnitUseCase<Flow<ChartAccount>> {
 
-        override suspend fun invoke(input: Set<Feature>): ChartAccount {
-            val data = repository.fetch().fold(
-                onSuccess = { it },
-                onFailure = { ChartAccount(classAccounts = emptyList()) }
-            )
-            return ChartAccount(classAccounts = data.classAccounts.mapNotNull { classAccount -> classAccount.filter(input) })
+        override fun invoke(): Flow<ChartAccount> {
+            return chartRepository.observe()
         }
+    }
 
-        private fun ClassAccount.filter(feature: Set<Feature>) = groupAccounts
-            .mapNotNull { groupAccount -> groupAccount.filter(feature) }
-            .takeIf { it.isNotEmpty() }
-            ?.let { copy(groupAccounts = it) }
+    class ApplyFilter(
+        private val chartRepository: ChartRepository,
+    ) : UseCase<ChartFilter, Unit> {
 
-        private fun GroupAccount.filter(features: Set<Feature>) = syntheticAccounts
-            .filter { features.all { feature -> feature in it.features } }
-            .takeIf { it.isNotEmpty() }
-            ?.let { copy(syntheticAccounts = it) }
+        override fun invoke(input: ChartFilter) {
+            chartRepository.applyFilter(input)
+        }
+    }
+
+    class ResetFilter(
+        private val chartRepository: ChartRepository,
+    ) : UnitUseCase<Unit> {
+
+        override fun invoke() {
+            chartRepository.reset()
+        }
     }
 }

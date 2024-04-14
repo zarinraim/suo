@@ -124,7 +124,7 @@ private fun Content(
     LazyColumn(modifier = Modifier.padding(innerPadding).fillMaxHeight()) {
         item { VerticalSpacer() }
         when {
-            state.searchQuery.isNotEmpty() -> searchResults(state)
+             state.searchQuery.isNotEmpty() -> searchResults(state, onAccount)
             else -> accounts(state = state, onAccount = onAccount)
         }
 
@@ -153,7 +153,6 @@ private fun FilterBottomSheet(
                 selected = it.selected, onClick = { onFeature(it) },
                 content = {
                     Box(
-                        modifier = Modifier.padding(horizontal = 8.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(text = it.label, fontSize = 16.sp)
@@ -191,10 +190,11 @@ private fun LazyListScope.accounts(
 
 private fun LazyListScope.searchResults(
     state: State,
+    onAccount: (AccountId) -> Unit,
 ) {
     when {
-        state.filteredAccounts.isEmpty() -> emptyState()
-        else -> syntheticAccounts(state.filteredAccounts)
+        state.accounts.items.isEmpty() -> emptyState()
+        else -> accounts(state = state, onAccount = onAccount)
     }
 }
 
