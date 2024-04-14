@@ -1,5 +1,6 @@
 package com.zarinraim.accounting.scene
 
+import androidx.lifecycle.viewModelScope
 import com.zarinraim.accounting.domain.ChartAccountUseCase
 import com.zarinraim.accounting.model.AccountId
 import com.zarinraim.accounting.model.ChartAccount
@@ -15,6 +16,7 @@ import com.zarinraim.accounting.scene.ChartAccountsViewModel.State
 import com.zarinraim.accounting.utils.StatefulViewModel
 import com.zarinraim.accounting.utils.ViewModelState
 import com.zarinraim.accounting.utils.normalize
+import kotlinx.coroutines.launch
 
 class ChartAccountsViewModel(
     private val fetchAccounts: ChartAccountUseCase.Fetch,
@@ -54,11 +56,11 @@ class ChartAccountsViewModel(
         filter()
     }
 
-    private fun fetch() {
+    private fun fetch() = viewModelScope.launch {
         state = fetchAccounts().toState()
     }
 
-    private fun filter() {
+    private fun filter() = viewModelScope.launch {
         val filtered = filterAccounts(state.features.filter { it.selected }.map { it.type }.toSet())
         state = state.copy(
             accounts = ChartAccountFormat.format(classAccounts = filtered.classAccounts, expandDefault = false),

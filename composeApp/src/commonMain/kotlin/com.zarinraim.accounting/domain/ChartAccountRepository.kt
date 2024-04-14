@@ -4,5 +4,5 @@ import com.zarinraim.accounting.model.ChartAccount
 
 interface ChartAccountRepository {
 
-    fun fetch(): ChartAccount
+    suspend fun fetch(): Result<ChartAccount>
 }

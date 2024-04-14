@@ -128,7 +128,7 @@ private fun Content(
             else -> accounts(state = state, onAccount = onAccount)
         }
 
-        item { VerticalSpacer(16.dp) }
+        item { VerticalSpacer(80.dp) }
     }
 }
 

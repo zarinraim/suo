@@ -4,26 +4,32 @@ import com.zarinraim.accounting.model.ChartAccount
 import com.zarinraim.accounting.model.ClassAccount
 import com.zarinraim.accounting.model.Feature
 import com.zarinraim.accounting.model.GroupAccount
-import com.zarinraim.accounting.utils.UnitUseCase
-import com.zarinraim.accounting.utils.UseCase
+import com.zarinraim.accounting.utils.SuspendUnitUseCase
+import com.zarinraim.accounting.utils.SuspendUseCase
 
 interface ChartAccountUseCase {
 
     class Fetch(
         private val repository: ChartAccountRepository,
-    ) : UnitUseCase<ChartAccount> {
+    ) : SuspendUnitUseCase<ChartAccount> {
 
-        override fun invoke(): ChartAccount {
-            return repository.fetch()
+        override suspend fun invoke(): ChartAccount {
+            return repository.fetch().fold(
+                onSuccess = { it },
+                onFailure = { ChartAccount(classAccounts = emptyList()) }
+            )
         }
     }
 
     class Filter(
         private val repository: ChartAccountRepository,
-    ) : UseCase<Set<Feature>, ChartAccount> {
+    ) : SuspendUseCase<Set<Feature>, ChartAccount> {
 
-        override fun invoke(input: Set<Feature>): ChartAccount {
-            val data = repository.fetch()
+        override suspend fun invoke(input: Set<Feature>): ChartAccount {
+            val data = repository.fetch().fold(
+                onSuccess = { it },
+                onFailure = { ChartAccount(classAccounts = emptyList()) }
+            )
             return ChartAccount(classAccounts = data.classAccounts.mapNotNull { classAccount -> classAccount.filter(input) })
         }
 

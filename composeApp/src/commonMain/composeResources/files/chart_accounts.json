@@ -1,0 +1,2411 @@
+{
+  "classAccounts": [
+    {
+      "id": "0",
+      "title": "DLOUHODOBÝ MAJETEK",
+      "groupAccounts": [
+        {
+          "id": "01",
+          "title": "Dlouhodobý nehmotný majetek",
+          "syntheticAccounts": [
+            {
+              "id": "012",
+              "title": "Nehmotné výsledky výzkumu a vývoje",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "013",
+              "title": "Software",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "014",
+              "title": "Ostatní ocenitelná práva",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "015",
+              "title": "Goodwill",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "016",
+              "title": "Povolenky na emise",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "017",
+              "title": "Preferenční limity",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "019",
+              "title": "Ostatní dlouhodobý nehmotný majetek",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "02",
+          "title": "Dlouhodobý hmotný majetek odpisovaný",
+          "syntheticAccounts": [
+            {
+              "id": "021",
+              "title": "Stavby",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "022",
+              "title": "Hmotné movité věci a jejich soubory",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "025",
+              "title": "Pěstitelské celky trvalých porostů",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "026",
+              "title": "Dospělá zvířata a jejich skupiny",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "029",
+              "title": "Jiný dlouhodobý hmotný majetek",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "03",
+          "title": "Dlouhodobý hmotný majetek neodpisovaný",
+          "syntheticAccounts": [
+            {
+              "id": "031",
+              "title": "Pozemky",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "032",
+              "title": "Umělecká díla a sbírky",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "04",
+          "title": "Nedokončený dlouhodobý nehmotný a hmotný majetek",
+          "syntheticAccounts": [
+            {
+              "id": "041",
+              "title": "Pořízení dlouhodobého nehmotného majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "042",
+              "title": "Pořízení dlouhodobého hmotného majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "05",
+          "title": "Poskytnuté zálohy na dlouhodobý majetek",
+          "syntheticAccounts": [
+            {
+              "id": "051",
+              "title": "Poskytnuté zálohy na dlouhodobý nehmotný majetek",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "052",
+              "title": "Poskytnuté zálohy na dlouhodobý hmotný majetek",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "053",
+              "title": "Poskytnuté zálohy na dlouhodobý finanční majetek",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "06",
+          "title": "Dlouhodobý finanční majetek",
+          "syntheticAccounts": [
+            {
+              "id": "061",
+              "title": "Podíly – ovládaná nebo ovládající osoba",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "062",
+              "title": "Podíly – podstatný vliv",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "063",
+              "title": "Ostatní dlouhodobé cenné papíry a podíly",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "065",
+              "title": "Dluhové cenné papíry držené do splatnosti",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "066",
+              "title": "Zápůjčky a úvěry - ovládaná nebo ovládající osoba",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "067",
+              "title": "Ostatní zápůjčky a úvěry",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "068",
+              "title": "Zápůjčky a úvěry – podstatný vliv",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "069",
+              "title": "Jiný dlouhodobý finanční majetek",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "07",
+          "title": "Oprávky k dlouhodobému nehmotnému majetku",
+          "syntheticAccounts": [
+            {
+              "id": "072",
+              "title": "Oprávky k nehmotným výsledkům výzkumu a vývoje",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "073",
+              "title": "Oprávky k softwaru",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "074",
+              "title": "Oprávky k ostatním ocenitelným právům",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "075",
+              "title": "Oprávky ke goodwillu",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "079",
+              "title": "Oprávky k ostatnímu dlouhodobému nehmotnému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "08",
+          "title": "Oprávky k dlouhodobému hmotnému majetku",
+          "syntheticAccounts": [
+            {
+              "id": "081",
+              "title": "Oprávky ke stavbám",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "082",
+              "title": "Oprávky k hmotným movitým věcem a jejich souborům",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "085",
+              "title": "Oprávky k pěstitelským celkům trvalých porostů",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "086",
+              "title": "Oprávky k dospělým zvířatům a jejich skupinám",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "089",
+              "title": "Oprávky k jinému dlouhodobému hmotnému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "09",
+          "title": "Opravné položky k dlouhodobému majetku",
+          "syntheticAccounts": [
+            {
+              "id": "091",
+              "title": "Opravná položka k dlouhodobému nehmotnému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "092",
+              "title": "Opravná položka k dlouhodobému hmotnému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "093",
+              "title": "Opravná položka k dlouhodobému nedokončenému nehmotnému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "094",
+              "title": "Opravná položka k dlouhodobému nedokončenému hmotnému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "095",
+              "title": "Opravná položka k poskytnutým zálohám na dlouhodobý majetek",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "096",
+              "title": "Opravná položka k dlouhodobému finančnímu majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "097",
+              "title": "Oceňovací rozdíl k nabytému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "098",
+              "title": "Oprávky k oceňovacímu rozdílu k nabytému majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "title": "ZÁSOBY",
+      "groupAccounts": [
+        {
+          "id": "11",
+          "title": "Materiál",
+          "syntheticAccounts": [
+            {
+              "id": "111",
+              "title": "Pořízení materiálu",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "112",
+              "title": "Materiál na skladě",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "119",
+              "title": "Materiál na cestě",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "title": "Zásoby vlastní činnosti",
+          "syntheticAccounts": [
+            {
+              "id": "121",
+              "title": "Nedokončená výroba",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "122",
+              "title": "Polotovary vlastní výroby",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "123",
+              "title": "Výrobky",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "124",
+              "title": "Mladá a ostatní zvířata a jejich skupiny",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "title": "Zboží",
+          "syntheticAccounts": [
+            {
+              "id": "131",
+              "title": "Pořízení zboží",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "132",
+              "title": "Zboží na skladě a v prodejnách",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "139",
+              "title": "Zboží na cestě",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "15",
+          "title": "Poskytnuté zálohy na zásoby",
+          "syntheticAccounts": [
+            {
+              "id": "151",
+              "title": "Poskytnuté zálohy na materiál",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "152",
+              "title": "Poskytnuté zálohy na mladá zvířata",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "153",
+              "title": "Poskytnuté zálohy na zboží",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "19",
+          "title": "Opravné položky k zásobám",
+          "syntheticAccounts": [
+            {
+              "id": "191",
+              "title": "Opravná položka k materiálu",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "192",
+              "title": "Opravná položka k nedokončené výrobě",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "193",
+              "title": "Opravná položka k polotovarům vlastní výroby",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "194",
+              "title": "Opravná položka k výrobkům",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "195",
+              "title": "Opravná položka k mladým zvířatům",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "196",
+              "title": "Opravná položka ke zboží",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "197",
+              "title": "Opravná položka k zálohám na materiál",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "198",
+              "title": "Opravná položka k zálohám na zboží",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "199",
+              "title": "Opravná položka k zálohám na mladá zvířata",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "KRÁTKODOBÝ FINANČNÍ MAJETEK A PENĚŽNÍ PROSTŘEDKY",
+      "groupAccounts": [
+        {
+          "id": "21",
+          "title": "Peněžní prostředky v pokladně",
+          "syntheticAccounts": [
+            {
+              "id": "211",
+              "title": "Peněžní prostředky v pokladně",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "213",
+              "title": "Ceniny",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "22",
+          "title": "Peněžní prostředky na účtech",
+          "syntheticAccounts": [
+            {
+              "id": "221",
+              "title": "Peněžní prostředky na účtech",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23",
+          "title": "Krátkodobé úvěry",
+          "syntheticAccounts": [
+            {
+              "id": "231",
+              "title": "Krátkodobé úvěry",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "232",
+              "title": "Eskontní úvěry",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24",
+          "title": "Krátkodobé finanční výpomoci",
+          "syntheticAccounts": [
+            {
+              "id": "241",
+              "title": "Vydané krátkodobé dluhopisy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "249",
+              "title": "Ostatní krátkodobé finanční výpomoci",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "25",
+          "title": "Krátkodobý finanční majetek",
+          "syntheticAccounts": [
+            {
+              "id": "251",
+              "title": "Registrované majetkové cenné papíry k obchodování",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "252",
+              "title": "Vlastní podíly",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "253",
+              "title": "Registrované dluhové cenné papíry k obchodování",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "254",
+              "title": "Směnky k inkasu",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "255",
+              "title": "Vlastní dluhopisy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "256",
+              "title": "Dluhové cenné papíry se splat. do 1 roku držené do splatnosti",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "257",
+              "title": "Ostatní cenné papíry k obchodování",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "258",
+              "title": "Podíly – ovládaná nebo ovládající osoba",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "26",
+          "title": "Převody mezi finančními účty",
+          "syntheticAccounts": [
+            {
+              "id": "261",
+              "title": "Peníze na cestě",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "29",
+          "title": "Opravné položky ke krátkodobému finančnímu majetku",
+          "syntheticAccounts": [
+            {
+              "id": "291",
+              "title": "Opravná položka ke krátkodobému finančnímu majetku",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "ZÚČTOVACÍ VZTAHY",
+      "groupAccounts": [
+        {
+          "id": "31",
+          "title": "Pohledávky (krátkodobé a dlouhodobé)",
+          "syntheticAccounts": [
+            {
+              "id": "311",
+              "title": "Pohledávky z obchodních vztahů",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "312",
+              "title": "Směnky k inkasu",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "313",
+              "title": "Pohledávky za eskontované cenné papíry",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "314",
+              "title": "Poskytnuté zálohy – dlouhodobé a krátkodobé",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "315",
+              "title": "Ostatní pohledávky",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "32",
+          "title": "Závazky (krátkodobé)",
+          "syntheticAccounts": [
+            {
+              "id": "321",
+              "title": "Závazky z obchodních vztahů",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "322",
+              "title": "Směnky k úhradě",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "324",
+              "title": "Přijaté zálohy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "325",
+              "title": "Ostatní závazky",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "33",
+          "title": "Zúčtování se zaměstnanci a institucemi",
+          "syntheticAccounts": [
+            {
+              "id": "331",
+              "title": "Zaměstnanci",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "333",
+              "title": "Ostatní závazky vůči zaměstnancům",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "335",
+              "title": "Pohledávky za zaměstnanci",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "336",
+              "title": "Zúčtování s institucemi sociál. zabezpečení a zdravot. pojištění",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "34",
+          "title": "Zúčtování daní a dotací",
+          "syntheticAccounts": [
+            {
+              "id": "341",
+              "title": "Daň z příjmů",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "342",
+              "title": "Ostatní přímé daně",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "343",
+              "title": "Daň z přidané hodnoty",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "345",
+              "title": "Ostatní daně a poplatky",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "346",
+              "title": "Dotace ze státního rozpočtu",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "347",
+              "title": "Ostatní dotace",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "349",
+              "title": "Vyrovnávací účet pro DPH",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "35",
+          "title": "Pohledávky za společníky",
+          "syntheticAccounts": [
+            {
+              "id": "351",
+              "title": "Pohledávky – ovládaná nebo ovládající osoba",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "352",
+              "title": "Pohledávky – podstatný vliv",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "353",
+              "title": "Pohledávky za upsaný základní kapitál",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "354",
+              "title": "Pohledávky za společníky při úhradě ztráty",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "355",
+              "title": "Ostatní pohledávky za společníky obchodní korporace",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "358",
+              "title": "Pohledávky za společníky sdruženými ve společnostech",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "36",
+          "title": "Závazky ke společníkům",
+          "syntheticAccounts": [
+            {
+              "id": "361",
+              "title": "Závazky – ovládaná nebo ovládající osoba",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "362",
+              "title": "Závazky – podstatný vliv",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "364",
+              "title": "Závazky ke společníkům při rozdělování zisku",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "365",
+              "title": "Ostatní závazky ke společníkům obchodní korporace",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "366",
+              "title": "Závazky ke společníkům ze závislé činnosti",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "367",
+              "title": "Závazky z upsaných nesplacených cenných papírů a vkladů",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "368",
+              "title": "Závazky ke společníkům sdruženým ve společnosti",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "37",
+          "title": "Jiné pohledávky a závazky",
+          "syntheticAccounts": [
+            {
+              "id": "371",
+              "title": "Pohledávky z prodeje obchodního závodu",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "372",
+              "title": "Závazky z koupě obchodního závodu",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "373",
+              "title": "Pohledávky a závazky z pevných termínových operací",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "374",
+              "title": "Pohledávky z nájmu a pachtu",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "375",
+              "title": "Pohledávky z vydaných dluhopisů",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "376",
+              "title": "Nakoupené opce",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "377",
+              "title": "Prodané opce",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "378",
+              "title": "Jiné pohledávky",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "379",
+              "title": "Jiné závazky",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "38",
+          "title": "Přechodné účty aktiv a pasiv",
+          "syntheticAccounts": [
+            {
+              "id": "381",
+              "title": "Náklady příštích období",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "382",
+              "title": "Komplexní náklady příštích období",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "383",
+              "title": "Výdaje příštích období",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "384",
+              "title": "Výnosy příštích období",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "385",
+              "title": "Příjmy příštích období",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "388",
+              "title": "Dohadné účty aktivní",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "389",
+              "title": "Dohadné účty pasivní",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "39",
+          "title": "Opravná položka k zúčtovacím vztahům a vnitřní zúčtování",
+          "syntheticAccounts": [
+            {
+              "id": "391",
+              "title": "Opravná položka k pohledávkám",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "395",
+              "title": "Vnitřní zúčtování",
+              "features": [
+                "R",
+                "A"
+              ]
+            },
+            {
+              "id": "398",
+              "title": "Spojovací účet při společnosti",
+              "features": [
+                "R",
+                "A"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "KAPITÁLOVÉ ÚČTY A DLOUHODOBÉ ZÁVAZKY",
+      "groupAccounts": [
+        {
+          "id": "41",
+          "title": "Základní kapitál a kapitálové fondy",
+          "syntheticAccounts": [
+            {
+              "id": "411",
+              "title": "Základní kapitál",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "412",
+              "title": "Ážio",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "413",
+              "title": "Ostatní kapitálové fondy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "414",
+              "title": "Oceňovací rozdíly z přecenění majetku a závazků",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "416",
+              "title": "Rozdíly z ocenění při přeměnách obchodních korporací",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "417",
+              "title": "Rozdíly z přeměn obchodních korporací",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "418",
+              "title": "Oceňovací rozdíly z přecenění při přeměnách obchodních korporací",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "419",
+              "title": "Změny základního kapitálu",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "42",
+          "title": "Fondy ze zisku a převedené výsledky hospodaření",
+          "syntheticAccounts": [
+            {
+              "id": "421",
+              "title": "Ostatní rezervní fondy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "422",
+              "title": "Nedělitelný fond",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "423",
+              "title": "Statutární fondy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "426",
+              "title": "Jiný výsledek hospodaření minulých let",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "427",
+              "title": "Ostatní fondy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "428",
+              "title": "Nerozdělený zisk minulých let",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "429",
+              "title": "Neuhrazená ztráta minulých let",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "43",
+          "title": "Výsledek hospodaření",
+          "syntheticAccounts": [
+            {
+              "id": "431",
+              "title": "Výsledek hospodaření ve schvalovacím řízení",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "432",
+              "title": "Rozhodnuto o zálohové výplatě podílu na zisku",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "45",
+          "title": "Rezervy",
+          "syntheticAccounts": [
+            {
+              "id": "451",
+              "title": "Rezervy podle zvláštních právních předpisů",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "453",
+              "title": "Rezerva na daň z příjmů",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "459",
+              "title": "Ostatní rezervy",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "46",
+          "title": "Dlouhodobé závazky k úvěrovým institucím",
+          "syntheticAccounts": [
+            {
+              "id": "461",
+              "title": "Závazky k úvěrovým institucím",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "47",
+          "title": "Dlouhodobé závazky",
+          "syntheticAccounts": [
+            {
+              "id": "471",
+              "title": "Dlouhodobé závazky – ovládaná nebo ovládající osoba",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "472",
+              "title": "Dlouhodobé závazky – podstatný vliv",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "473",
+              "title": "Vydané dluhopisy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "474",
+              "title": "Závazky z nájmu a pachtu",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "475",
+              "title": "Dlouhodobé přijaté zálohy",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "478",
+              "title": "Dlouhodobé směnky k úhradě",
+              "features": [
+                "R",
+                "P"
+              ]
+            },
+            {
+              "id": "479",
+              "title": "Jiné dlouhodobé závazky",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "48",
+          "title": "Odložený daňový závazek a pohledávka",
+          "syntheticAccounts": [
+            {
+              "id": "481",
+              "title": "Odložený daňový závazek a pohledávka",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "49",
+          "title": "Individuální podnikatel",
+          "syntheticAccounts": [
+            {
+              "id": "491",
+              "title": "Účet individuálního podnikatele",
+              "features": [
+                "R",
+                "P"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "NÁKLADY",
+      "groupAccounts": [
+        {
+          "id": "50",
+          "title": "Spotřebované nákupy",
+          "syntheticAccounts": [
+            {
+              "id": "501",
+              "title": "Spotřeba materiálu",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "502",
+              "title": "Spotřeba energie",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "503",
+              "title": "Spotřeba ostatních neskladovatelných dodávek",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "504",
+              "title": "Prodané zboží",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "51",
+          "title": "Služby",
+          "syntheticAccounts": [
+            {
+              "id": "511",
+              "title": "Opravy a udržování",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "512",
+              "title": "Cestovné",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "513",
+              "title": "Náklady na reprezentaci",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "518",
+              "title": "Ostatní služby",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "52",
+          "title": "Osobní náklady",
+          "syntheticAccounts": [
+            {
+              "id": "521",
+              "title": "Mzdové náklady",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "522",
+              "title": "Příjmy společníků obchodní korporace ze závislé činnosti",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "523",
+              "title": "Odměny členům orgánů obchodních korporací",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "524",
+              "title": "Zákonné sociální a zdravotní pojištění",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "525",
+              "title": "Ostatní sociální a zdravotní pojištění",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "526",
+              "title": "Sociální náklady individuálního podnikatele",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "527",
+              "title": "Zákonné sociální náklady",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "528",
+              "title": "Ostatní sociální náklady",
+              "features": [
+                "V",
+                "N"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "53",
+          "title": "Daně a poplatky",
+          "syntheticAccounts": [
+            {
+              "id": "531",
+              "title": "Daň silniční",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "532",
+              "title": "Daň z nemovitých věcí",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "538",
+              "title": "Ostatní daně a poplatky",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "54",
+          "title": "Jiné provozní náklady",
+          "syntheticAccounts": [
+            {
+              "id": "541",
+              "title": "Zůstatková cena prodaného dlouhodobého nehmotného a hmotného majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "542",
+              "title": "Prodaný materiál",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "543",
+              "title": "Poskytnuté dary",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "544",
+              "title": "Smluvní pokuty a úroky z prodlení",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "545",
+              "title": "Ostatní pokuty a penále",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "546",
+              "title": "Odpis pohledávky",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "547",
+              "title": "Mimořádné provozní náklady",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "548",
+              "title": "Ostatní provozní náklady",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "549",
+              "title": "Manka a škody",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "55",
+          "title": "Odpisy, rezervy, komplexní náklady příštích období a opravné položky v provozní oblasti",
+          "syntheticAccounts": [
+            {
+              "id": "551",
+              "title": "Odpisy dlouhodobého nehmotného a hmotného majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "552",
+              "title": "Tvorba a zúčtování rezerv podle zvláštních právních předpisů",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "554",
+              "title": "Tvorba a zúčtování ostatních rezerv",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "555",
+              "title": "Tvorba a zúčtování komplexních nákladů příštích období",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "557",
+              "title": "Zúčtování oprávky k oceňovacímu rozdílu k nabytému majetku",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "558",
+              "title": "Tvorba a zúčtování zákonných opravných položek",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "559",
+              "title": "Tvorba a zúčtování opravných položek",
+              "features": [
+                "V",
+                "N"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "56",
+          "title": "Finanční náklady",
+          "syntheticAccounts": [
+            {
+              "id": "561",
+              "title": "Prodané cenné papíry a podíly",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "562",
+              "title": "Úroky",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "563",
+              "title": "Kurzové ztráty",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "564",
+              "title": "Náklady z přecenění majetkových cenných papírů k obchodování",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "565",
+              "title": "Poskytnuté dary (peněžní)",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "566",
+              "title": "Náklady z finančního majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "567",
+              "title": "Náklady z derivátových operací",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "568",
+              "title": "Ostatní a mimořádné finanční náklady",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "569",
+              "title": "Manka a škody na finančním majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "57",
+          "title": "Rezervy a opravné položky ve finanční oblasti",
+          "syntheticAccounts": [
+            {
+              "id": "574",
+              "title": "Tvorba a zúčtování finančních rezerv",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "579",
+              "title": "Tvorba a zúčtování opravných položek ve finanční činnosti",
+              "features": [
+                "V",
+                "N"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "58",
+          "title": "Změna stavu zásob vlastní činnosti a aktivace",
+          "syntheticAccounts": [
+            {
+              "id": "581",
+              "title": "Změna stavu nedokončené výroby",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "582",
+              "title": "Změna stavu polotovarů",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "583",
+              "title": "Změna stavu výrobků",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "584",
+              "title": "Změna stavu mladých a ostatních zvířat",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "585",
+              "title": "Aktivace materiálu a zboží",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "586",
+              "title": "Aktivace vnitropodnikových služeb",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "587",
+              "title": "Aktivace dlouhodobého nehmotného majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "588",
+              "title": "Aktivace dlouhodobého hmotného majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "59",
+          "title": "Daně z příjmů, převodové účty a rezerva na daň z příjmů",
+          "syntheticAccounts": [
+            {
+              "id": "591",
+              "title": "Daň z příjmů – splatná",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "592",
+              "title": "Daň z příjmů – odložená",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "595",
+              "title": "Dodatečné odvody daně z příjmů",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "596",
+              "title": "Převod podílu na výsledku hospodaření společníkům",
+              "features": [
+                "V",
+                "N"
+              ]
+            },
+            {
+              "id": "597",
+              "title": "Převod provozních nákladů",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "598",
+              "title": "Převod finančních nákladů",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "599",
+              "title": "Změna stavu rezervy na daň z příjmů",
+              "features": [
+                "V",
+                "N"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "VÝNOSY",
+      "groupAccounts": [
+        {
+          "id": "60",
+          "title": "Tržby za vlastní výkony a zboží",
+          "syntheticAccounts": [
+            {
+              "id": "601",
+              "title": "Tržby za vlastní výrobky",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "602",
+              "title": "Tržby z prodeje služeb",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "604",
+              "title": "Tržby za zboží",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "64",
+          "title": "Jiné provozní výnosy",
+          "syntheticAccounts": [
+            {
+              "id": "641",
+              "title": "Tržby z prodeje dlouhodobého nehmotného a hmotného majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "642",
+              "title": "Tržby z prodeje materiálu",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "643",
+              "title": "Přijaté dary (nepeněžní)",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "644",
+              "title": "Smluvní pokuty a úroky z prodlení",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "645",
+              "title": "Výnosy z postoupených pohledávek",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "646",
+              "title": "Výnosy z odepsaných pohledávek",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "647",
+              "title": "Mimořádné provozní výnosy",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "648",
+              "title": "Ostatní provozní výnosy",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "649",
+              "title": "Odpis záporného goodwillu a zúčtování oprávky k oceň. rozdílu k nabytému majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "66",
+          "title": "Finanční výnosy",
+          "syntheticAccounts": [
+            {
+              "id": "661",
+              "title": "Tržby z prodeje cenných papírů a podílů",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "662",
+              "title": "Úroky",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "663",
+              "title": "Kurzové zisky",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "664",
+              "title": "Výnosy z přecenění majetkových cenných papírů k obchodování",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "665",
+              "title": "Výnosy z dlouhodobého finančního majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "666",
+              "title": "Výnosy z krátkodobého finančního majetku",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "667",
+              "title": "Výnosy z derivátových operací",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "668",
+              "title": "Ostatní finanční a mimořádné výnosy",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "669",
+              "title": "Přijaté dary (peněžní)",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "69",
+          "title": "Převodové účty",
+          "syntheticAccounts": [
+            {
+              "id": "697",
+              "title": "Převod provozních výnosů",
+              "features": [
+                "V",
+                "D"
+              ]
+            },
+            {
+              "id": "698",
+              "title": "Převod finančních výnosů",
+              "features": [
+                "V",
+                "D"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "ZÁVĚRKOVÉ A PODROZVAHOVÉ ÚČTY",
+      "groupAccounts": [
+        {
+          "id": "70",
+          "title": "Účty rozvažné",
+          "syntheticAccounts": [
+            {
+              "id": "701",
+              "title": "Počáteční účet rozvažný",
+              "features": [
+                "Z"
+              ]
+            },
+            {
+              "id": "702",
+              "title": "Konečný účet rozvažný",
+              "features": [
+                "Z"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "71",
+          "title": "Účet zisků a ztrát",
+          "syntheticAccounts": [
+            {
+              "id": "710",
+              "title": "Účet zisků a ztrát",
+              "features": [
+                "Z"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "79",
+          "title": "Podrozvahové účty",
+          "syntheticAccounts": [
+            {
+              "id": "799",
+              "title": "Evidenční účet",
+              "features": [
+                "P*",
+                "P"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
