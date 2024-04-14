@@ -16,7 +16,8 @@ object CommonGraph {
         single<ChartAccountRepository> { new(::ChartAccountRepositoryImpl) }
 
         factoryOf(ChartAccountUseCase::Fetch)
+        factoryOf(ChartAccountUseCase::Filter)
 
-        viewModelDefinition { ChartAccountsViewModel(get()) }
+        viewModelDefinition { new(::ChartAccountsViewModel) }
     }
 }
