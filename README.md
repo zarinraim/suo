@@ -26,6 +26,8 @@ statement) or account type (assets, liabilities, taxable, non-taxable).
 
 ## Demo
 
+https://github.com/zarinraim/suo/assets/28330226/a04a42f4-714f-4e86-934a-c4c043fd7072
+
 ## Resources
 
 - [Chart of accounts](https://portal.pohoda.cz/image/uctova_osnova_web.aspx/)
