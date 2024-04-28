@@ -39,6 +39,10 @@ class ChartAccountsViewModel(
         applyFilter(state.chartFilter)
     }
 
+    fun onQueryClear() {
+        onQueryChange("")
+    }
+
     fun onRefresh() {
         state = state.copy(
             searchQuery = "",

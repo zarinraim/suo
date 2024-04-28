@@ -34,6 +34,7 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -70,6 +71,7 @@ fun ChartAccountsScreen(viewModel: ChartAccountsViewModel = getViewModel()) {
         state = viewModel.states.collectAsState().value,
         onAccount = viewModel::onAccount,
         onQueryChange = viewModel::onQueryChange,
+        onQueryClear = viewModel::onQueryClear,
         onRefresh = viewModel::onRefresh,
         onFeature = viewModel::onFeature
     )
@@ -81,6 +83,7 @@ private fun Screen(
     state: State,
     onAccount: (AccountId) -> Unit,
     onQueryChange: (String) -> Unit,
+    onQueryClear: () -> Unit,
     onRefresh: () -> Unit,
     onFeature: (FeatureState) -> Unit,
 ) {
@@ -99,6 +102,7 @@ private fun Screen(
                         state = state,
                         focusManager = focusManager,
                         onChange = onQueryChange,
+                        onClear = onQueryClear,
                         onFilter = { coroutineScope.launch { sheetState.show() } }
                     )
                 },
@@ -124,7 +128,7 @@ private fun Content(
     LazyColumn(modifier = Modifier.padding(innerPadding).fillMaxHeight()) {
         item { VerticalSpacer() }
         when {
-             state.searchQuery.isNotEmpty() -> searchResults(state, onAccount)
+            state.searchQuery.isNotEmpty() -> searchResults(state, onAccount)
             else -> accounts(state = state, onAccount = onAccount)
         }
 
@@ -267,7 +271,13 @@ private fun LazyListScope.syntheticAccounts(state: List<SyntheticItemState>) {
 }
 
 @Composable
-private fun SearchBar(state: State, focusManager: FocusManager, onChange: (String) -> Unit, onFilter: () -> Unit) {
+private fun SearchBar(
+    state: State,
+    focusManager: FocusManager,
+    onChange: (String) -> Unit,
+    onClear: () -> Unit,
+    onFilter: () -> Unit
+) {
     Surface(elevation = 8.dp) {
         Row(
             modifier = Modifier.padding(8.dp),
@@ -289,6 +299,15 @@ private fun SearchBar(state: State, focusManager: FocusManager, onChange: (Strin
                         cursorColor = Color(color = 0xffe79a3d)
                     ),
                     onValueChange = onChange,
+                    trailingIcon = if (state.searchQuery.isNotEmpty()) @Composable {
+                        {
+                            IconButton(onClick = { onClear() }) {
+                                Icon(Icons.Default.Clear, "")
+                            }
+                        }
+                    } else {
+                        null
+                    },
                 )
             }
             HorizontalSpacer(8.dp)
